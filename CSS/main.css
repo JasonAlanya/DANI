@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Sacramento&family=Signika:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+}
+
+
+#main {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../pexels-marko-obrvan-306344.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+#main canvas{
+    width: 100%;
+    height: 100vh;
+}
+#portada{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-top: -100vh;
+    background-image: url("../Montaña2.png");
+    background-position: bottom;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#portada p{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    z-index: 10;
+    font-size: 3em;
+    font-family: "Sacramento",Arial, serif;
+    border-radius: 5px;
+    animation-name: aparecer;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aparecer{
+    0%{
+        background-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 2555, 0);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.3);
+        color: rgba(255, 255, 2555, 1);
+    }
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /*background: linear-gradient(to bottom, rgb(237,112,12), #dff1ff);*/
+    margin-top: -100vh;
+    animation-duration: 5s;
+    flex-direction: column;
+}
+section p{
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Sacramento",Arial, serif;
+    margin-bottom: -0.5rem;
+}
+/*section .color{
+    position: absolute;
+    filter: blur(150px);
+}
+
+/*section .color:nth-child(1){
+    background: #ff359b;
+    width: 600px;
+    height: 600px;
+    top: -350px;
+    z-index: 0;
+}
+
+section .color:nth-child(2){
+    background: #00d2ff;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    left: 100px;
+}
+
+section .color:nth-child(3){
+    background: #fffd87;
+    width: 300px;
+    height: 300px;
+    bottom: 50px;
+    right: 0px;
+}*/
+
+ul{
+    position: relative;
+    display: flex;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    margin: 1em;
+}
+
+ul li a{
+    position: relative;
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    overflow: hidden;
+    
+}
+
+ul li a:hover{
+    transform: translateY(-20px);
+}
+
+ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skew(45deg) translateX(150px);
+    transition: .5s;
+}
+
+ul li a:hover:before{
+    transform: skew(45deg) translateX(-150px);
+}
+
+@media screen and (max-width: 768px) {
+
+    ul li{
+        margin: 0.6em;
+    }
+
+    ul li a{
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 5px;
+        font-size: 1.5em;
+    }
+    
+    ul li a:hover{
+        transform: translateY(0px);
+    }
+
+    #portada p{
+        padding: 1rem 1rem;
+
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    #portada p{
+        padding: 1rem 1rem;
+
+    }
+    ul{
+        flex-direction: column;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.png">
+  <title>Cumpleaños</title>
+  <link rel="stylesheet" type="text/css" href="/CSS/main.css" media="screen" />
+    
+</head>
+
+<body>
+  <div id="main">
+  </div>
+  <div id="portada">
+    <p id="parrafo" onclick="mostrar()">¡Feliz cumpleaños <br/> mi amor!</p>
+  </div>
+  <section id="nombre">
+    <p>Te amo</p>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=v0tmkMLUDwY" target="_blank">D</a></li>
+      <li><a href="https://www.youtube.com/watch?v=x3K_G2ITu4Q" target="_blank">A</a></li>
+      <li><a href="https://www.youtube.com/watch?v=U0U8NOOjymo" target="_blank">N</a></li>
+      <li><a href="https://www.youtube.com/watch?v=w5XnATR3KfA" target="_blank">I</a></li>
+      <li><a href="https://www.youtube.com/watch?v=DXV79KHSftc" target="_blank">T</a></li>
+      <li><a href="https://www.youtube.com/watch?v=dUIRO4-9PTU" target="_blank">Z</a></li>
+      <li><a href="https://www.youtube.com/watch?v=HZkKv9UHxdw" target="_blank">A</a></li>
+    </ul>
+  </section>
+  <script src="main.js"></script>
+  <script>
+    const root = document.getElementById('main')
+    const fireworks = new Fireworks(root);
+    fireworks.start()
+
+    const mostrar=()=>{
+      document.getElementById("parrafo").style.display='none';
+      document.getElementById("nombre").style.display='flex';
+    }
+  </script>
+</body>
+
+</html>
